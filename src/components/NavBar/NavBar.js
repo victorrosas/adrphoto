@@ -1,13 +1,34 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { 
+    Container, 
+    NavbarWrap,
+    NavbarWrapLeft, 
+    NavbarWrapLogo, 
+    NavbarWrapRight, 
+    Logo, 
+    NavLink } from './styles';
 
 function NavBar() {
   return (
-      <Container>
-          <h1>NavBar</h1>
-      </Container>
-  )
+    <Container>
+        <NavbarWrap>
+            <NavbarWrapLeft>
+                    <NavLink to="/">HOME</NavLink>
+                    <NavLink to="/">SOBRE</NavLink>
+                    <NavLink to="/">TRABALHOS</NavLink>
+            </NavbarWrapLeft>
+
+            <NavbarWrapLogo>
+                <Logo />
+            </NavbarWrapLogo>
+            <NavbarWrapRight>
+                    <NavLink to="/">DEPOIMENTOS</NavLink>
+                    <NavLink to="/">ORÇAMENTO</NavLink>
+            </NavbarWrapRight>
+        </NavbarWrap>
+    </Container>
+  );
 }
 
 export default NavBar;
